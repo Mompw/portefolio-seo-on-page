@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Wedson Momperousse</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .page {
+            min-height: 100vh;
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            page-break-after: always;
+        }
+
+        /* Correction globale pour les images */
+        .portfolio-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Page de garde */
+        .cover-page {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .cover-page h1 {
+            font-size: 3.5rem;
+            margin-bottom: 30px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .cover-page .tagline {
+            font-size: 1.8rem;
+            font-weight: 300;
+            border-top: 2px solid rgba(255,255,255,0.5);
+            border-bottom: 2px solid rgba(255,255,255,0.5);
+            padding: 20px 40px;
+            display: inline-block;
+        }
+
+        /* Titres de pages */
+        .page-title {
+            font-size: 2.5rem;
+            color: #667eea;
+            margin-bottom: 40px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+            width: 100%;
+        }
+
+        .page-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: #764ba2;
+        }
+
+        /* Section Stats Agriconomie */
+        .stats-container {
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 4rem;
+            font-weight: 700;
+            margin: 10px 0;
+        }
+
+        .img-grid-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        /* Cartes Projets Web */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            width: 100%;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .project-image-container {
+            width: 100%;
+            background: #eee;
+            overflow: hidden;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .project-info {
+            padding: 20px;
+        }
+
+        .project-info h3 { color: #667eea; margin-bottom: 10px; }
+
+        .seo-features { list-style: none; font-size: 0.9rem; }
+        .seo-features li { padding: 4px 0; padding-left: 20px; position: relative; }
+        .seo-features li::before { content: '✓'; position: absolute; left: 0; color: #764ba2; font-weight: bold; }
+
+        /* Design Grid */
+        .design-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1100px;
+            width: 100%;
+        }
+
+        .design-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .insta-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5px;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .projects-grid, .img-grid-stats { grid-template-columns: 1fr; }
+            .insta-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page cover-page">
+        <h1>WEDSON MOMPEROUSSE</h1>
+        <div class="tagline">Expertise SEO & Polyvalence Digitale</div>
+    </div>
+
+    <div class="page">
+        <h2 class="page-title">Chiffres Clés Performance</h2>
+        <div class="stats-container">
+            <div class="highlight-box">
+                <h3>Succès Agriconomie.com</h3>
+                <div class="stat-number">+5000%</div>
+                <p>de croissance du trafic organique sur le Blog</p>
+                <div class="stat-number">1,7%</div>
+                <p>CTR moyen</p>
+                <div class="stat-number">+47,38%</div>
+                <p>mots-clés positionnés</p>
+            </div>
+            
+            <div class="img-grid-stats">
+                <img src="image/article-agryco-lapin.png" alt="SEO Lapin" class="portfolio-img">
+                <img src="image/article-agryco-npk.png" alt="SEO NPK" class="portfolio-img">
+                <img src="image/article-agryco.png" alt="SEO Blog" class="portfolio-img">
+            </div>
+            <p style="text-align: center; margin-top: 15px; color: #888; font-style: italic;">Analyses et suivi via SEMrush & Looker Studio</p>
+        </div>
+    </div>
+
+    <div class="page">
+        <h2 class="page-title">Expertise Web & SEO</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image-container">
+                    <img src="image/home-fhq.png" alt="Site Immo" class="portfolio-img">
+                </div>
+                <div class="project-info">
+                    <h3>Site Agent Immobilier</h3>
+                    <p><a href="https://floridahousequeen.com/home" target="_blank">https://floridahousequeen.com/home</a></p>
+                    <p>Optimisation locale et technique pour indépendant.</p>
+                    <ul class="seo-features">
+                        <li>SEO Local & Google My Business</li>
+                        <li>Structure HTML5 & Schema.org</li>
+                        <li>Optimisation du Core Web Vitals</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image-container">
+                    <img src="image/landing-service-multi-usa.png" alt="Landing USA" class="portfolio-img">
+                </div>
+                <div class="project-info">
+                    <h3>Landing Pages Multi-Services (USA)</h3>
+                    <p><a href="https://w-queen-tax.netlify.app/" target="_blank">https://w-queen-tax.netlify.app/</a></p>
+                    <p>Stratégie de conversion pour le marché américain.</p>
+                    <ul class="seo-features">
+                        <li>Copywriting orienté conversion (CTA)</li>
+                        <li>Tracking Analytics & Event Tracking</li>
+                        <li>Adaptation multilingue et culturelle</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page">
+        <h2 class="page-title">Création Visuelle & Social Media</h2>
+        <div class="design-grid">
+            <div class="design-card">
+                <h4>Identité Visuelle</h4>
+                <img src="image/NM’S SweetaRTS.png" alt="Logo" class="portfolio-img" style="margin-bottom: 10px;">
+                <p class="design-description">Logos et branding pour freelances.</p>
+            </div>
+
+            <div class="design-card">
+                <h4>Social Media</h4>
+                <div class="insta-grid">
+                    <img src="image/insta-1.png" alt="Post 1" class="portfolio-img">
+                    <img src="image/insta-2.png" alt="Post 2" class="portfolio-img">
+                    <img src="image/insta-3.png" alt="Post 3" class="portfolio-img">
+                    <img src="image/insta-4.png" alt="Post 4" class="portfolio-img">
+                    <img src="image/insta-5.png" alt="Post 5" class="portfolio-img">
+                    <img src="image/insta-6.png" alt="Post 6" class="portfolio-img">
+                </div>
+                <p class="design-description">Grilles de contenus Instagram thématiques.</p>
+            </div>
+
+            <div class="design-card">
+                <h4>Marketing Print</h4>
+                <img src="image/tax-flyer.png" alt="Flyer Tax" class="portfolio-img" style="margin-bottom: 10px;">
+                <p class="design-description">Conception de flyers promotionnels.</p>
+                <div style="margin-top:10px; font-size: 0.8rem; color: #764ba2;">Note: Guide de conservation disponible en version PDF.</div>
+            </div>
+                        <div class="design-card">
+                <h4>Marketing Print</h4>
+                <img src="image/Nm's sweetarts Menu.png" alt="Flyer Tax" class="portfolio-img" style="margin-bottom: 10px;">
+                <p class="design-description">Conception de flyers promotionnels.</p>
+                <div style="margin-top:10px; font-size: 0.8rem; color: #764ba2;">Note: Guide de conservation disponible en version PDF.</div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
