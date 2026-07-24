@@ -111,7 +111,7 @@
             margin-top: 20px;
         }
 
-        /* Cartes Projets Web */
+        /* Cartes Projets Web & Vibe Coding */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -143,6 +143,24 @@
         .seo-features { list-style: none; font-size: 0.9rem; }
         .seo-features li { padding: 4px 0; padding-left: 20px; position: relative; }
         .seo-features li::before { content: '✓'; position: absolute; left: 0; color: #764ba2; font-weight: bold; }
+
+        /* Badges Tech pour Vibe Coding */
+        .tech-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 15px 0;
+        }
+
+        .tech-badge {
+            background: #f0f2fe;
+            color: #667eea;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 20px;
+            border: 1px solid #d0d7de;
+        }
 
         /* Design Grid */
         .design-grid {
@@ -178,7 +196,7 @@
 
     <div class="page cover-page">
         <h1>WEDSON MOMPEROUSSE</h1>
-        <div class="tagline">Expertise SEO & Polyvalence Digitale</div>
+        <div class="tagline">SEO, Vibe Coding & Dynamic Marketing</div>
     </div>
 
     <div class="page">
@@ -240,6 +258,41 @@
         </div>
     </div>
 
+    <!-- ========================================================= -->
+    <!-- NOUVELLE PAGE : VIBE CODING & RAPID PROTOYPING -->
+    <!-- ========================================================= -->
+    <div class="page">
+        <h2 class="page-title">Vibe Coding & Automation</h2>
+        <div class="projects-grid" style="grid-template-columns: 1fr; max-width: 900px;">
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>🚚 Paret Rouge — Invoice & Dispatch Manager</h3>
+                    <p><strong>Prototypage rapide & Application SaaS métier développée via IA (Vibe Coding)</strong></p>
+                    
+                    <div class="tech-badges">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">Streamlit Cloud</span>
+                        <span class="tech-badge">Google Apps Script</span>
+                        <span class="tech-badge">GCP OAuth2 / Secrets</span>
+                        <span class="tech-badge">PDF Generation</span>
+                    </div>
+
+                    <p style="margin-top: 10px; font-size: 0.95rem; color: #555;">
+                        Conception et déploiement d'une solution d'automatisation de facturation et de gestion logistique pour le secteur du transport routier. L'outil simplifie le flux opérationnel entre les chauffeurs sur le terrain et la comptabilité.
+                    </p>
+
+                    <h4 style="margin-top: 15px; color: #764ba2; font-size: 1rem;">Points Clés de Réalisation :</h4>
+                    <ul class="seo-features">
+                        <li><strong>Orchestration IA & Architecture :</strong> Développement guidé par la logique métier pour l'interconnexion en temps réel entre Streamlit, Google Sheets et Google Drive.</li>
+                        <li><strong>Génération PDF & Traitement Fichiers :</strong> Téléversement en Base64 de bons de livraison et conversion dynamique de factures PDF via Google Apps Script.</li>
+                        <li><strong>Sécurité des Données SaaS :</strong> Mise en conformité de l'application (chiffrement des clés GCP via Secrets TOML, gestion des exceptions, environnement 100% privé).</li>
+                        <li><strong>Gain Opérationnel :</strong> Réduction du temps de traitement administratif de 10 min à moins de 30 secondes par course.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="page">
         <h2 class="page-title">Création Visuelle & Social Media</h2>
         <div class="design-grid">
@@ -268,13 +321,13 @@
                 <p class="design-description">Conception de flyers promotionnels.</p>
                 <div style="margin-top:10px; font-size: 0.8rem; color: #764ba2;">Note: Guide de conservation disponible en version PDF.</div>
             </div>
-                        <div class="design-card">
+
+            <div class="design-card">
                 <h4>Marketing Print</h4>
-                <img src="Nm's sweetarts Menu.png" alt="Flyer Tax" class="portfolio-img" style="margin-bottom: 10px;">
+                <img src="Nm's sweetarts Menu.png" alt="Menu SweetaRTS" class="portfolio-img" style="margin-bottom: 10px;">
                 <p class="design-description">Conception de flyers promotionnels.</p>
                 <div style="margin-top:10px; font-size: 0.8rem; color: #764ba2;">Note: Guide de conservation disponible en version PDF.</div>
             </div>
-
         </div>
     </div>
 
